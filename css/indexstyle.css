@@ -1,0 +1,373 @@
+:root {
+    --cream: #f6e8dc;
+    --cream-light: #fff5ec;
+    --burgundy: #351416;
+    --burgundy-light: #4a2022;
+    --rose: #bd9285;
+    --brown: #79534b;
+    --text-dark: #3b201e;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cream);
+    color: var(--text-dark);
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+
+.portfolio-nav {
+    background-color: var(--cream);
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--burgundy);
+
+    display: flex;
+    align-items: center;
+    line-height: 1.2;
+    padding: 0;}
+
+.navbar-brand:hover {
+    color: var(--brown);
+}
+.logo-image {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+
+    display: block;
+    flex-shrink: 0;}
+
+.navbar-nav {
+    gap: 0px;
+}
+
+.portfolio-nav .nav-link {
+    color: var(--text-dark);
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+
+    margin-left: 22px;
+    padding-top: 0;
+    padding-bottom: 0;
+    line-height: 1.5;}
+
+.portfolio-nav .nav-link:hover,
+.portfolio-nav .nav-link.active {
+    color: var(--rose);
+}
+
+.navbar-toggler {
+    border-color: var(--burgundy);
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.hero-section {
+    padding: 25px 5% 40px;
+}
+
+
+.hero-topline {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--brown);
+    margin-bottom: 25px;
+}
+
+.topline-decoration {
+    color: var(--rose);
+}
+
+.topline-right {
+    text-align: right;
+    line-height: 1.8;
+    font-size: 10px;
+}
+
+
+.portfolio-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(55px, 10.5vw, 145px);
+    font-weight: 400;
+    color: var(--burgundy);
+    text-align: center;
+    letter-spacing: -3px;
+    line-height: 1;
+    margin: 35px 0 20px;
+    white-space: nowrap;
+}
+
+
+
+.hero-divider {
+    text-align: center;
+    color: var(--rose);
+    font-size: 15px;
+    margin: 25px 0;
+}
+
+
+
+.hero-subtitle {
+    text-align: center;
+    color: var(--brown);
+    font-size: 11px;
+    letter-spacing: 4px;
+    margin-bottom: 30px;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+    padding: 30px 5% 60px;
+}
+
+
+
+.hero-intro {
+    max-width: 540px;
+}
+
+.intro-label {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: var(--brown);
+    margin-bottom: 22px;
+}
+
+.intro-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(38px, 4.5vw, 65px);
+    font-weight: 400;
+    line-height: 1.1;
+    color: var(--burgundy);
+    margin-bottom: 25px;
+}
+
+.intro-heading span {
+    font-weight: 600;
+}
+
+.intro-text {
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text-dark);
+    max-width: 470px;
+    margin-bottom: 30px;
+}
+
+
+
+.text-link {
+    display: inline-block;
+    color: var(--burgundy);
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 2px;
+    border-bottom: 1px solid var(--burgundy);
+    padding-bottom: 8px;
+    transition: 0.3s ease;
+}
+
+.text-link:hover {
+    color: var(--brown);
+    border-color: var(--brown);
+}
+
+
+
+.hero-portrait {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 360px;
+}
+
+
+
+.portrait-oval {
+    position: absolute;
+    width: 330px;
+    height: 420px;
+    background-color: var(--burgundy);
+    border-radius: 50%;
+}
+
+
+
+.main-profile-image {
+    position: relative;
+    z-index: 1;
+    width: 290px;
+    height: 380px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+
+
+
+.footer {
+    text-align: center;
+    padding: 30px 15px;
+    border-top: 1px solid rgba(53, 20, 22, 0.2);
+    color: var(--brown);
+}
+
+.footer p {
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.footer small {
+    font-size: 11px;
+}
+
+
+
+@media (max-width: 991px) {
+
+    .hero-content {
+        gap: 30px;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    .portfolio-heading {
+        font-size: clamp(50px, 9vw, 90px);
+        letter-spacing: -2px;
+    }
+
+    .portrait-circle {
+        width: 300px;
+        height: 300px;
+    }
+
+    .main-profile-image {
+        width: 250px;
+        height: 280px;
+    }
+}
+
+
+
+@media (max-width: 767px) {
+
+    .hero-section {
+        padding: 20px 5% 30px;
+    }
+
+    .hero-topline {
+        font-size: 9px;
+        gap: 10px;
+    }
+
+    .topline-decoration {
+        display: none;
+    }
+
+    .topline-right {
+        font-size: 8px;
+    }
+
+    .portfolio-heading {
+        font-size: clamp(35px, 9vw, 65px);
+        letter-spacing: -1px;
+        white-space: normal;
+    }
+
+    .hero-divider {
+        font-size: 11px;
+    }
+
+    .hero-subtitle {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 25px 3% 40px;
+    }
+
+    .hero-intro {
+        text-align: center;
+        margin: auto;
+    }
+
+    .intro-heading {
+        font-size: 42px;
+    }
+
+    .intro-text {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-portrait {
+        min-height: 320px;
+    }
+
+    .portrait-circle {
+        width: 280px;
+        height: 280px;
+    }
+
+    .main-profile-image {
+        width: 230px;
+        height: 260px;
+    }
+
+    .footer p {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+}
+
+
+
+@media (max-width: 380px) {
+
+    .portrait-circle {
+        width: 240px;
+        height: 240px;
+    }
+
+    .main-profile-image {
+        width: 200px;
+        height: 220px;
+    }
+
+    .intro-heading {
+        font-size: 35px;
+    }
+}

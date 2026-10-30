@@ -1,0 +1,254 @@
+:root {
+    --cream: #f6e8dc;
+    --cream-light: #fff5ec;
+    --burgundy: #351416;
+    --burgundy-light: #4a2022;
+    --rose: #bd9285;
+    --brown: #79534b;
+    --text-dark: #3b201e;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--cream-light);
+    color: var(--text-dark);
+    font-family: 'DM Sans', sans-serif;
+}
+
+
+/* NAVBAR */
+
+.portfolio-nav {
+    background-color: var(--cream);
+    padding: 22px 0;
+}
+
+.portfolio-nav .navbar-brand {
+    display: flex;
+    align-items: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--burgundy);
+    padding: 0;
+    margin: 0;
+}
+
+.portfolio-nav .navbar-brand:hover {
+    color: var(--brown);
+}
+
+.logo-image {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.navbar-nav {
+    gap: 25px;
+}
+
+.portfolio-nav .nav-link {
+    color: var(--text-dark);
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+}
+
+.portfolio-nav .nav-link:hover,
+.portfolio-nav .nav-link.active {
+    color: var(--rose);
+}
+
+.navbar-toggler {
+    border-color: var(--burgundy);
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+
+/* CONTACT HEADER */
+
+.contact-header {
+    background-color: var(--cream);
+    padding: 75px 0 85px;
+    text-align: center;
+}
+
+.section-label {
+    color: var(--brown);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    margin-bottom: 18px;
+}
+
+.contact-header h1 {
+    color: var(--burgundy);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(48px, 7vw, 82px);
+    font-weight: 500;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.contact-header h1 span {
+    color: var(--rose);
+    font-style: italic;
+}
+
+.contact-intro {
+    max-width: 550px;
+    margin: 0 auto;
+    color: var(--brown);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+
+/* CONTACT SECTION */
+
+.contact-section {
+    padding: 90px 0;
+    background-color: var(--cream-light);
+}
+
+.contact-info {
+    padding: 15px 10px 15px 0;
+}
+
+.contact-info h2 {
+    color: var(--burgundy);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 38px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.contact-description {
+    color: var(--brown);
+    font-size: 14px;
+    line-height: 2;
+    margin-bottom: 40px;
+}
+
+
+/* CONTACT DETAILS */
+
+.contact-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(53, 20, 22, 0.15);
+}
+
+.detail-label {
+    color: var(--rose);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.contact-detail a {
+    width: fit-content;
+    color: var(--burgundy);
+    font-size: 14px;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+    transition: color 0.3s ease;
+}
+
+.contact-detail a:hover {
+    color: var(--rose);
+}
+
+
+/* FOOTER */
+
+.portfolio-footer {
+    display: flex;
+    align-items: center;
+    background-color: var(--burgundy);
+    color: var(--cream);
+    padding: 25px 0;
+}
+
+.portfolio-footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.portfolio-footer p {
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+.portfolio-footer a {
+    color: var(--cream);
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.portfolio-footer a:hover {
+    color: var(--rose);
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 991px) {
+
+    .navbar-nav {
+        gap: 0;
+    }
+
+    .portfolio-nav .nav-link {
+        margin-left: 0;
+        padding: 10px 0;
+    }
+
+    .contact-section {
+        padding: 65px 0;
+    }
+
+    .contact-info {
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .contact-header {
+        padding: 55px 0 65px;
+    }
+
+    .contact-section {
+        padding: 45px 0;
+    }
+
+    .contact-info h2 {
+        font-size: 32px;
+    }
+
+    .portfolio-footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+}

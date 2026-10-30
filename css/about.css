@@ -1,0 +1,819 @@
+/* ==============================
+   COLOUR PALETTE
+============================== */
+
+:root {
+    --cream: #f6e8dc;
+    --cream-light: #fff5ec;
+    --burgundy: #351416;
+    --burgundy-light: #4a2022;
+    --rose: #bd9285;
+    --brown: #79534b;
+    --text-dark: #3b201e;
+    --border: rgba(53, 20, 22, 0.2);
+}
+
+
+/* ==============================
+   GENERAL STYLING
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--cream);
+    color: var(--text-dark);
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+.section-container {
+    width: 90%;
+    max-width: 1250px;
+    margin: auto;
+}
+
+
+/* =====================================
+   NAVIGATION
+===================================== */
+
+.portfolio-nav {
+    background-color: var(--cream);
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(53, 20, 22, 0.15);
+}
+
+.portfolio-nav .navbar-brand {
+    display: flex;
+    align-items: center;
+    color: var(--burgundy);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    padding: 0;
+    margin: 0;
+}
+
+.logo-image {
+    display: block;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.portfolio-nav .navbar-brand:hover {
+    color: var(--brown);
+}
+
+.portfolio-nav .nav-link {
+    color: var(--text-dark);
+    font-size: 12px;
+    margin-left: 22px;
+    padding-top: 0;
+    padding-bottom: 0;
+    line-height: 1.5;
+    transition: color 0.3s ease;
+}
+
+.portfolio-nav .nav-link:hover,
+.portfolio-nav .nav-link.active {
+    color: var(--brown);
+}
+
+.navbar-toggler {
+    border-color: var(--burgundy);
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+
+/* ==============================
+   PAGE HEADER
+============================== */
+
+.about-header {
+    padding: 85px 5% 65px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+}
+
+.eyebrow,
+.section-label {
+    color: var(--brown);
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.about-header h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(55px, 8vw, 95px);
+    font-weight: 400;
+    line-height: 1.1;
+    color: var(--burgundy);
+}
+
+.about-header h1 span,
+.section-heading h2 span,
+.beyond-heading h2 span {
+    color: var(--rose);
+}
+
+.decorative-divider {
+    color: var(--rose);
+    margin: 30px 0;
+    font-size: 14px;
+}
+
+.header-subtitle {
+    color: var(--brown);
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+
+/* ==============================
+   INTRODUCTION SECTION
+============================== */
+
+.about-introduction {
+    padding-top: 85px;
+    padding-bottom: 100px;
+}
+
+.intro-number {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--rose);
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 45px;
+}
+
+.intro-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.intro-title h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(42px, 5vw, 68px);
+    font-weight: 400;
+    line-height: 1.1;
+    color: var(--burgundy);
+}
+
+
+.small-divider {
+    width: 75px;
+    height: 2px;
+    background-color: var(--rose);
+    margin-top: 30px;
+}
+
+.intro-description {
+    padding-top: 10px;
+}
+
+.intro-description p {
+    font-size: 14px;
+    line-height: 2;
+    margin-bottom: 22px;
+    color: var(--text-dark);
+}
+
+
+/* ==============================
+   SECTION HEADINGS
+============================== */
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 30px;
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(40px, 5vw, 65px);
+    font-weight: 400;
+    color: var(--burgundy);
+    line-height: 1.1;
+}
+
+.section-side-text {
+    color: var(--brown);
+    font-size: 10px;
+    letter-spacing: 2px;
+    line-height: 1.9;
+    text-align: right;
+}
+
+
+/* ==============================
+   EDUCATION SECTION
+============================== */
+
+.education-section {
+    padding-top: 70px;
+    padding-bottom: 100px;
+    border-top: 1px solid var(--border);
+}
+
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Burgundy Education Cards */
+
+.education-card {
+    position: relative;
+    min-height: 340px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--burgundy);
+    color: var(--cream);
+    border: 1px solid var(--burgundy);
+
+    transition: background-color 0.3s ease,
+                color 0.3s ease,
+                border-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+/* Education Card Hover */
+
+.education-card:hover {
+    background-color: var(--cream-light);
+    color: var(--burgundy);
+    border-color: var(--rose);
+    transform: translateY(-5px);
+}
+
+.card-number {
+    position: absolute;
+    top: 22px;
+    right: 25px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    color: var(--rose);
+}
+
+.card-period {
+    margin-top: 35px;
+    margin-bottom: 18px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--rose);
+}
+
+.education-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 39px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--cream);
+    transition: color 0.3s ease;
+}
+
+.education-card h4 {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: var(--cream);
+    transition: color 0.3s ease;
+}
+
+.institution {
+    font-size: 12px;
+    line-height: 1.8;
+    color: var(--cream-light);
+    margin-bottom: 25px;
+    transition: color 0.3s ease;
+}
+
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 245, 236, 0.3);
+    padding-top: 15px;
+    margin-top: auto;
+    transition: border-color 0.3s ease;
+}
+
+.card-bottom span {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--rose);
+}
+
+.card-bottom strong {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--cream);
+    transition: color 0.3s ease;
+}
+
+/* Change Education Text on Hover */
+
+.education-card:hover h3,
+.education-card:hover h4,
+.education-card:hover .institution,
+.education-card:hover .card-bottom strong {
+    color: var(--burgundy);
+}
+
+.education-card:hover .card-bottom {
+    border-color: var(--border);
+}
+
+.education-card:hover .card-period,
+.education-card:hover .card-bottom span {
+    color: var(--brown);
+}
+
+
+/* ==============================
+   TRAINING AND INTERNSHIPS
+============================== */
+
+.experience-section {
+    padding-top: 80px;
+    padding-bottom: 100px;
+    border-top: 1px solid var(--border);
+}
+
+.experience-list {
+    border-top: 1px solid var(--border);
+}
+
+.experience-item {
+    display: grid;
+    grid-template-columns: 60px 1fr auto;
+    gap: 30px;
+    align-items: start;
+    padding: 35px 10px;
+    border-bottom: 1px solid var(--border);
+    transition: background-color 0.3s ease;
+}
+
+.experience-item:hover {
+    background-color: rgba(255, 245, 236, 0.5);
+}
+
+.experience-index {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    color: var(--rose);
+}
+
+.experience-type {
+    color: var(--brown);
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.experience-content h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--burgundy);
+    margin-bottom: 8px;
+}
+
+.experience-content h4 {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--brown);
+    margin-bottom: 15px;
+}
+
+.experience-content > p:last-child {
+    max-width: 700px;
+    font-size: 13px;
+    line-height: 1.9;
+    margin-bottom: 0;
+}
+
+.experience-tag {
+    border: 1px solid var(--rose);
+    padding: 8px 12px;
+    color: var(--brown);
+    font-size: 9px;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+
+/* ==============================
+   ACADEMIC ACHIEVEMENTS
+============================== */
+
+.achievements-section {
+    padding-top: 80px;
+    padding-bottom: 100px;
+    border-top: 1px solid var(--border);
+}
+
+.achievement-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+/* Burgundy Achievement Cards */
+
+.achievement-card {
+    position: relative;
+    min-height: 320px;
+    padding: 35px;
+
+    background-color: var(--burgundy);
+    color: var(--cream);
+    border: 1px solid var(--burgundy);
+
+    transition: background-color 0.3s ease,
+                color 0.3s ease,
+                border-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+/* Achievement Card Hover */
+
+.achievement-card:hover {
+    background-color: var(--cream-light);
+    color: var(--burgundy);
+    border-color: var(--rose);
+    transform: translateY(-5px);
+}
+
+.achievement-symbol {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 35px;
+    color: var(--rose);
+    margin-bottom: 20px;
+}
+
+.achievement-category {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--rose);
+    margin-bottom: 15px;
+}
+
+.achievement-card h3 {
+    max-width: 400px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 500;
+    color: var(--cream);
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.achievement-card > p:not(.achievement-category) {
+    max-width: 420px;
+    font-size: 13px;
+    line-height: 1.9;
+    color: var(--cream-light);
+    transition: color 0.3s ease;
+}
+
+.achievement-number {
+    display: block;
+    margin-top: 20px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 45px;
+    color: var(--cream);
+    transition: color 0.3s ease;
+}
+
+.achievement-caption {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--rose);
+    margin-top: 8px;
+    transition: color 0.3s ease;
+}
+
+/* Change Achievement Text on Hover */
+
+.achievement-card:hover h3,
+.achievement-card:hover > p:not(.achievement-category),
+.achievement-card:hover .achievement-number {
+    color: var(--burgundy);
+}
+
+.achievement-card:hover .achievement-category,
+.achievement-card:hover .achievement-caption {
+    color: var(--brown);
+}
+
+
+/* ==============================
+   BEYOND ACADEMICS
+============================== */
+
+.beyond-section {
+    background-color: var(--burgundy);
+    color: var(--cream);
+    padding: 90px 0;
+}
+
+.beyond-content {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.beyond-heading .section-label {
+    color: var(--rose);
+}
+
+.beyond-heading h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(45px, 6vw, 75px);
+    font-weight: 400;
+    line-height: 1.05;
+    color: var(--cream);
+}
+
+.beyond-description {
+    padding-top: 10px;
+}
+
+.beyond-description p {
+    font-size: 14px;
+    line-height: 2;
+    color: var(--cream-light);
+    margin-bottom: 22px;
+}
+
+.interest-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.interest-list span {
+    padding: 10px 14px;
+    border: 1px solid rgba(246, 232, 220, 0.35);
+    color: var(--cream);
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+
+/* ==============================
+   CLOSING SECTION
+============================== */
+
+.closing-section {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: var(--cream-light);
+}
+
+.closing-section > p {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: var(--brown);
+    margin-bottom: 20px;
+}
+
+.closing-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(35px, 5vw, 58px);
+    font-weight: 400;
+    color: var(--burgundy);
+    margin-bottom: 25px;
+}
+
+.closing-link {
+    display: inline-block;
+    color: var(--burgundy);
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 2px;
+    border-bottom: 1px solid var(--burgundy);
+    padding-bottom: 8px;
+    transition: 0.3s ease;
+}
+
+.closing-link:hover {
+    color: var(--rose);
+    border-color: var(--rose);
+}
+
+
+/* ==============================
+   FOOTER
+============================== */
+
+.footer {
+    text-align: center;
+    padding: 30px 15px;
+    border-top: 1px solid var(--border);
+    color: var(--brown);
+}
+
+.footer p {
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.footer small {
+    font-size: 11px;
+}
+
+
+/* ==============================
+   TABLET RESPONSIVENESS
+============================== */
+
+@media (max-width: 991px) {
+
+    .section-container {
+        width: 92%;
+    }
+
+    .intro-layout,
+    .beyond-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .education-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .education-card {
+        min-height: 310px;
+    }
+
+    .experience-item {
+        gap: 20px;
+    }
+
+    .experience-content h3 {
+        font-size: 26px;
+    }
+}
+
+
+/* ==============================
+   MOBILE RESPONSIVENESS
+============================== */
+
+@media (max-width: 767px) {
+
+    .about-header {
+        padding: 65px 5% 55px;
+    }
+
+    .header-subtitle {
+        font-size: 9px;
+        line-height: 2;
+        letter-spacing: 2px;
+    }
+
+    .about-introduction,
+    .education-section,
+    .experience-section,
+    .achievements-section {
+        padding-top: 60px;
+        padding-bottom: 65px;
+    }
+
+    .intro-layout,
+    .beyond-content {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .intro-number {
+        margin-bottom: 30px;
+    }
+
+    .section-heading {
+        align-items: start;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+
+    .section-side-text {
+        text-align: left;
+    }
+
+    .education-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .education-card {
+        min-height: 300px;
+    }
+
+    .experience-item {
+        grid-template-columns: 35px 1fr;
+        gap: 15px;
+        padding: 28px 5px;
+    }
+
+    .experience-index {
+        font-size: 24px;
+    }
+
+    .experience-content h3 {
+        font-size: 26px;
+    }
+
+    .experience-tag {
+        grid-column: 2;
+        justify-self: start;
+    }
+
+    .achievement-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .achievement-card {
+        min-height: 280px;
+        padding: 28px;
+    }
+
+    .beyond-section {
+        padding: 65px 0;
+    }
+
+    .closing-section {
+        padding: 60px 20px;
+    }
+
+    .footer p {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+}
+
+
+/* ==============================
+   SMALL MOBILE SCREENS
+============================== */
+
+@media (max-width: 380px) {
+
+    .about-header h1 {
+        font-size: 48px;
+    
+        padding: 60px 5% 45px;}
+
+    .intro-title h2 {
+        font-size: 40px;
+    }
+
+    .education-card,
+    .achievement-card {
+        padding: 23px;
+    }
+
+    .experience-content h3 {
+        font-size: 23px;
+    }
+
+    .interest-list span {
+        font-size: 8px;
+        padding: 8px 10px;
+    }
+}

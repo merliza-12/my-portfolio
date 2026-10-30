@@ -1,0 +1,469 @@
+
+/* =====================================
+   COLOURS AND GLOBAL STYLES
+===================================== */
+
+:root {
+    --cream: #f6e8dc;
+    --cream-light: #fff5ec;
+    --burgundy: #351416;
+    --burgundy-light: #4a2022;
+    --rose: #bd9285;
+    --brown: #79534b;
+    --text-dark: #3b201e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--cream);
+    color: var(--text-dark);
+    font-family: "DM Sans", sans-serif;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =====================================
+   NAVIGATION
+===================================== */
+
+.portfolio-nav {
+    background-color: var(--cream);
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(53, 20, 22, 0.15);
+}
+
+.portfolio-nav .navbar-brand {
+    display: flex;
+    align-items: center;
+    color: var(--burgundy);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    padding: 0;
+    margin-right: 0;
+}
+
+.logo-image {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+    flex-shrink: 0;
+    display: block;
+}
+
+.portfolio-nav .navbar-brand:hover {
+    color: var(--brown);
+}
+
+.portfolio-nav .nav-link {
+    color: var(--text-dark);
+    font-family: "DM Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    margin-left: 22px;
+    transition: color 0.3s ease;
+    padding-top: 0;
+    padding-bottom: 0;
+    line-height: 1.5;
+}
+
+.portfolio-nav .nav-link:hover,
+.portfolio-nav .nav-link.active {
+    color: var(--brown);
+}
+
+.navbar-toggler {
+    border-color: var(--burgundy);
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+
+/* =====================================
+   PAGE HEADER
+===================================== */
+
+.skills-header {
+    padding: 85px 5% 65px;
+    text-align: center;
+}
+
+.section-label {
+    color: var(--brown);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.skills-header h1 {
+    color: var(--burgundy);
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(55px, 8vw, 95px);
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.skills-header h1 span {
+    color: var(--rose);
+}
+
+.header-description {
+    max-width: 570px;
+    margin: 0 auto;
+    color: var(--brown);
+    font-size: 15px;
+}
+
+.header-line {
+    width: 70px;
+    height: 1px;
+    background-color: var(--rose);
+    margin: 35px auto 0;
+}
+
+
+/* =====================================
+   SKILLS CONTAINER
+===================================== */
+
+.skills-container {
+    padding: 10px 0 90px;
+}
+
+.skill-category {
+    margin-bottom: 75px;
+}
+
+
+/* =====================================
+   CATEGORY HEADING
+===================================== */
+
+.category-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 22px;
+    padding-bottom: 22px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(53, 20, 22, 0.16);
+}
+
+.category-number {
+    color: var(--rose);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.category-label {
+    color: var(--brown);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.category-heading h2 {
+    color: var(--burgundy);
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(32px, 4vw, 45px);
+    font-weight: 600;
+    line-height: 1.1;
+    margin: 0;
+}
+
+
+/* =====================================
+   SKILL CARDS
+===================================== */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.skill-card {
+    min-height: 210px;
+    padding: 28px;
+    background-color: var(--cream-light);
+    border: 1px solid rgba(53, 20, 22, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(53, 20, 22, 0.08);
+}
+
+.skill-index {
+    display: block;
+    color: var(--rose);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 25px;
+}
+
+.skill-card h3 {
+    color: var(--burgundy);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 29px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    color: var(--brown);
+    font-size: 13px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+
+/* =====================================
+   CORE KNOWLEDGE
+===================================== */
+
+.knowledge-section {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 55px;
+    align-items: start;
+    background-color: var(--burgundy);
+    padding: 45px;
+    margin-bottom: 75px;
+}
+
+.knowledge-content .section-label {
+    color: var(--rose);
+}
+
+.knowledge-content h2 {
+    color: var(--cream-light);
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(35px, 4vw, 48px);
+    font-weight: 600;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.knowledge-content > p:last-child {
+    color: var(--cream);
+    font-size: 13px;
+    line-height: 1.9;
+    margin-bottom: 0;
+}
+
+.knowledge-tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 12px;
+}
+
+.knowledge-tags span {
+    display: inline-block;
+    color: var(--cream-light);
+    border: 1px solid rgba(246, 232, 220, 0.35);
+    padding: 10px 14px;
+    font-size: 11px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.knowledge-tags span:hover {
+    background-color: var(--cream);
+    color: var(--burgundy);
+}
+
+
+/* =====================================
+   LEARNING SECTION
+===================================== */
+
+.learning-section {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 15px 0 25px;
+}
+
+.learning-section h2 {
+    color: var(--burgundy);
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(38px, 5vw, 58px);
+    font-weight: 600;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.learning-section > p:not(.section-label) {
+    max-width: 580px;
+    margin: 0 auto 28px;
+    color: var(--brown);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.skills-button {
+    display: inline-block;
+    background-color: var(--burgundy);
+    color: var(--cream-light);
+    padding: 13px 22px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.skills-button span {
+    margin-left: 12px;
+}
+
+.skills-button:hover {
+    background-color: var(--rose);
+    color: var(--burgundy);
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+.portfolio-footer {
+    background-color: var(--cream);
+    padding: 22px 0;
+    border-top: 1px solid rgba(53, 20, 22, 0.15);
+}
+
+.portfolio-footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.portfolio-footer p {
+    color: var(--brown);
+    font-size: 11px;
+    margin: 0;
+}
+
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 991px) {
+
+    .portfolio-nav .navbar-nav .nav-link {
+        margin-left: 0;
+        padding: 10px 0;
+    }
+
+    .skills-header {
+        padding-top: 70px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .knowledge-section {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 35px;
+    }
+}
+
+
+@media (max-width: 767px) {
+
+    .skills-header {
+        padding: 60px 0 45px;
+    }
+
+    .skills-container {
+        padding-bottom: 55px;
+    }
+
+    .skill-category {
+        margin-bottom: 55px;
+    }
+
+    .category-heading {
+        gap: 15px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .skill-card {
+        min-height: auto;
+        padding: 25px;
+    }
+
+    .skill-index {
+        margin-bottom: 15px;
+    }
+
+    .knowledge-section {
+        padding: 28px 22px;
+        margin-bottom: 55px;
+    }
+
+    .knowledge-tags {
+        gap: 9px;
+    }
+
+    .knowledge-tags span {
+        padding: 9px 11px;
+        font-size: 10px;
+    }
+
+    .learning-section {
+        padding: 0 10px;
+    }
+
+    .portfolio-footer .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
+}
+
+
+@media (max-width: 400px) {
+
+    .category-heading h2 {
+        font-size: 30px;
+    }
+
+    .skill-card {
+        padding: 20px;
+    }
+}
